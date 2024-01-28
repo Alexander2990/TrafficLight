@@ -58,6 +58,9 @@
                                 <state key="normal" title="START">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="switchLightButtonDidTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="ezq-xp-M3G"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -73,12 +76,13 @@
                     <connections>
                         <outlet property="greenLightView" destination="fvq-5f-Qra" id="NAs-nO-GsD"/>
                         <outlet property="redLightView" destination="GsZ-D5-yVI" id="A5e-B7-143"/>
+                        <outlet property="switchLightButton" destination="Cxm-MT-mYi" id="8sf-Gs-5kb"/>
                         <outlet property="yellowLightView" destination="1Vz-kL-z4D" id="bVN-pb-NCx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="366" y="-58"/>
+            <point key="canvasLocation" x="365.64885496183206" y="-58.450704225352112"/>
         </scene>
     </scenes>
     <resources>

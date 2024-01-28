@@ -7,11 +7,24 @@
 
 import UIKit
 
+enum SignalColor {
+    case red
+    case yellow
+    case green
+}
+
 final class ViewController: UIViewController {
     
     @IBOutlet var redLightView: UIView!
     @IBOutlet var yellowLightView: UIView!
     @IBOutlet var greenLightView: UIView!
+    
+    @IBOutlet var switchLightButton: UIButton!
+    
+    private var signalColor = SignalColor.red
+    
+    private let lightOn: CGFloat = 1
+    private let lightOff = 0.3
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,8 +32,33 @@ final class ViewController: UIViewController {
         redLightView.layer.cornerRadius = 60
         yellowLightView.layer.cornerRadius = 60
         greenLightView.layer.cornerRadius = 60
+        
+        switchLightButton.layer.cornerRadius = 10
+        
+        redLightView.alpha = lightOff
+        yellowLightView.alpha = lightOff
+        greenLightView.alpha = lightOff
     }
 
-
+    @IBAction func switchLightButtonDidTapped() {
+        
+        switchLightButton.setTitle("NEXT", for: .normal)
+        
+        switch signalColor {
+        case .red:
+            redLightView.alpha = lightOn
+            greenLightView.alpha = lightOff
+            signalColor = .yellow
+        case .yellow:
+            yellowLightView.alpha = lightOn
+            redLightView.alpha = lightOff
+            signalColor = .green
+        case .green:
+            greenLightView.alpha = lightOn
+            yellowLightView.alpha = lightOff
+            signalColor = .red
+        }
+    }
+    
 }
 
