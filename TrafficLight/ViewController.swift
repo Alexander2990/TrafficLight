@@ -40,7 +40,7 @@ final class ViewController: UIViewController {
         greenLightView.alpha = lightOff
     }
 
-    @IBAction func switchLightButtonDidTapped() {
+    @IBAction func changeTrafficLight() {
         
         switchLightButton.setTitle("NEXT", for: .normal)
         
