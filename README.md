@@ -8,6 +8,5 @@ By pressing the button, the next traffic light signal is switched.
 * StackView
 * IBOutlet and IBAction
 
-<img src="https://github.com/Alexander2990/HelloWorld/assets/64682381/01eec513-292f-4043-8a36-b4ed6051055a" width="200" />
-<img src="https://github.com/Alexander2990/HelloWorld/assets/64682381/a878356d-18b3-4fae-87c1-2a2872dcd729" width="200" />
-
+<img src="https://github.com/Alexander2990/TrafficLight/assets/64682381/2b8617b1-f50f-4835-99b0-7a3686f3b801" width="200" />
+<img src="https://github.com/Alexander2990/TrafficLight/assets/64682381/e5e6c7d3-9b05-459b-8e56-a33fe7f1c63b" width="200" />
