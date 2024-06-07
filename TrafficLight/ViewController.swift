@@ -22,6 +22,10 @@ class ViewController: UIViewController {
         yellowTrafficLightView.layer.cornerRadius = yellowTrafficLightView.frame.width / 2
         greenTrafficLightView.layer.cornerRadius = greenTrafficLightView.frame.width / 2
         
+        redTrafficLightView.alpha = 0.3
+        yellowTrafficLightView.alpha = 0.3
+        greenTrafficLightView.alpha = 0.3
+        
         toggleTrafficLightButton.layer.cornerRadius = 20
     }
 
