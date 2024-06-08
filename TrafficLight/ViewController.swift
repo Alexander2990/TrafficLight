@@ -9,19 +9,15 @@ import UIKit
 
 final class ViewController: UIViewController {
     
-    enum TrafficLightColor {
-        case red
-        case yellow
-        case green
-    }
-    
     @IBOutlet private var toggleTrafficLightButton: UIButton!
     
     @IBOutlet private var redTrafficLightView: UIView!
     @IBOutlet private var yellowTrafficLightView: UIView!
     @IBOutlet private var greenTrafficLightView: UIView!
     
-    private var currentLight: TrafficLightColor = .green
+    private var currentLight: TrafficLightColor = .red
+    private let trafficSignalIsOn: CGFloat = 1
+    private let trafficSignalIsOff: CGFloat = 0.3
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,29 +26,40 @@ final class ViewController: UIViewController {
         yellowTrafficLightView.layer.cornerRadius = yellowTrafficLightView.frame.width / 2
         greenTrafficLightView.layer.cornerRadius = greenTrafficLightView.frame.width / 2
         
-        redTrafficLightView.alpha = 0.3
-        yellowTrafficLightView.alpha = 0.3
-        greenTrafficLightView.alpha = 0.3
+        redTrafficLightView.alpha = trafficSignalIsOff
+        yellowTrafficLightView.alpha = trafficSignalIsOff
+        greenTrafficLightView.alpha = trafficSignalIsOff
         
         toggleTrafficLightButton.layer.cornerRadius = 15
     }
     
     @IBAction private func switchTrafiicLightButton() {
+        if toggleTrafficLightButton.currentTitle == "START" {
+            toggleTrafficLightButton.setTitle("NEXT", for: .normal)
+        }
+        
         switch currentLight {
         case .red:
-            yellowTrafficLightView.alpha = 1
-            redTrafficLightView.alpha = 0.3
+            greenTrafficLightView.alpha = trafficSignalIsOff
+            redTrafficLightView.alpha = trafficSignalIsOn
             currentLight = .yellow
         case .yellow:
-            greenTrafficLightView.alpha = 1
-            yellowTrafficLightView.alpha = 0.3
+            redTrafficLightView.alpha = trafficSignalIsOff
+            yellowTrafficLightView.alpha = trafficSignalIsOn
             currentLight = .green
         case .green:
-            redTrafficLightView.alpha = 1
-            greenTrafficLightView.alpha = 0.3
+            yellowTrafficLightView.alpha = trafficSignalIsOff
+            greenTrafficLightView.alpha = trafficSignalIsOn
             currentLight = .red
-            toggleTrafficLightButton.setTitle("NEXT", for: .normal)
         }
     }
 }
 
+// MARK: TrafficLightColor
+extension ViewController {
+    private enum TrafficLightColor {
+        case red
+        case yellow
+        case green
+    }
+}
