@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_12" orientation="portrait" appearance="dark"/>
+    <device id="retina6_72" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,32 +13,35 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TrafficLight" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2UO-xn-J92">
-                                <rect key="frame" x="120" y="99" width="153" height="153"/>
+                                <rect key="frame" x="155" y="99" width="120" height="120"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="2UO-xn-J92" secondAttribute="height" multiplier="1:1" id="1cZ-iO-hgJ"/>
+                                    <constraint firstAttribute="width" constant="120" id="LxG-wp-SXb"/>
+                                    <constraint firstAttribute="height" constant="120" id="oSP-Rc-8qt"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Erl-hf-1jT">
-                                <rect key="frame" x="120" y="282" width="153" height="153"/>
+                                <rect key="frame" x="155" y="249" width="120" height="120"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="Erl-hf-1jT" secondAttribute="height" multiplier="1:1" id="Aqi-Pv-YH9"/>
+                                    <constraint firstAttribute="height" constant="120" id="Pne-vi-xpv"/>
+                                    <constraint firstAttribute="width" constant="120" id="Qac-jH-pmI"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0ok-eA-xse">
-                                <rect key="frame" x="120" y="465" width="153" height="153"/>
+                                <rect key="frame" x="155" y="399" width="120" height="120"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="0ok-eA-xse" secondAttribute="height" multiplier="1:1" id="a9D-Yx-Igo"/>
+                                    <constraint firstAttribute="height" constant="120" id="C9j-GF-oJf"/>
+                                    <constraint firstAttribute="width" constant="120" id="gqf-bq-qkE"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jfg-OL-aCW">
-                                <rect key="frame" x="101.66666666666669" y="729" width="190" height="48"/>
+                                <rect key="frame" x="120" y="805" width="190" height="48"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="190" id="yg1-fU-FOH"/>
@@ -56,17 +59,14 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="2UO-xn-J92" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="5aR-TC-WKU"/>
                             <constraint firstItem="2UO-xn-J92" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="8KR-3v-TOs"/>
-                            <constraint firstItem="0ok-eA-xse" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="EF1-Ts-nDo"/>
                             <constraint firstItem="0ok-eA-xse" firstAttribute="top" secondItem="Erl-hf-1jT" secondAttribute="bottom" constant="30" id="IZi-qh-C9c"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Erl-hf-1jT" secondAttribute="trailing" constant="120" id="K91-fM-vjb"/>
                             <constraint firstItem="Jfg-OL-aCW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="L3j-YQ-mGa"/>
                             <constraint firstItem="Erl-hf-1jT" firstAttribute="top" secondItem="2UO-xn-J92" secondAttribute="bottom" constant="30" id="YDS-Of-L2e"/>
-                            <constraint firstItem="Erl-hf-1jT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="mQQ-ic-Q9I"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2UO-xn-J92" secondAttribute="trailing" constant="120" id="mdv-z0-RgB"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0ok-eA-xse" secondAttribute="trailing" constant="120" id="qxS-Fz-hBi"/>
+                            <constraint firstItem="Erl-hf-1jT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Z6x-l3-a7g"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Jfg-OL-aCW" secondAttribute="bottom" multiplier="4:3.8" id="sRW-1Z-QFl"/>
+                            <constraint firstItem="0ok-eA-xse" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tZG-TU-YS1"/>
+                            <constraint firstItem="2UO-xn-J92" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tuH-yw-Zwq"/>
                         </constraints>
                     </view>
                     <connections>
