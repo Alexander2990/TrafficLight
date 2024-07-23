@@ -2,7 +2,7 @@
 
 ## Our Goal
 
-Learn to use a responsive UI and associate the year with the UI
+Learn to use a responsive UI and associate the code with the UI
 
 ## What I created
 
